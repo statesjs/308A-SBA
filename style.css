@@ -1,0 +1,44 @@
+main {
+  display: flex;
+  padding-top: 10%;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: rgb(34, 35, 35);
+  height: 100%;
+  width: 100%;
+}
+
+#navbar {
+  background: #c6bdbd !important;
+}
+
+.search {
+  display: flex;
+  padding: 30px;
+  border-style: solid;
+  border-color: azure;
+  border-radius: 10px;
+  margin: auto;
+  flex-direction: column;
+  color: rgb(138, 74, 74);
+  text-align: center;
+}
+
+#searchByName {
+}
+
+#results {
+  display: flex;
+  padding: 30px;
+  border-style: solid;
+  border-color: azure;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 4%;
+  width: 80%;
+  height: 70%;
+}
