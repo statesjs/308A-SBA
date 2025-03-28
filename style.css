@@ -24,11 +24,8 @@ body {
   border-radius: 10px;
   margin: auto;
   flex-direction: column;
-  color: rgb(138, 74, 74);
+  color: rgb(242, 238, 238);
   text-align: center;
-}
-
-#searchByName {
 }
 
 #results {
@@ -41,4 +38,118 @@ body {
   margin-top: 4%;
   width: 80%;
   height: 70%;
+}
+/* Layout for #results container */
+.results-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Main drink card */
+#main-drink {
+  flex: 1;
+  min-width: 300px;
+}
+
+.drink-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: #222;
+}
+
+.drink-image img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.drink-info {
+  margin-bottom: 1rem;
+}
+
+.drink-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ingredient-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+/* Other results panel */
+#other-results {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.other-results-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.result-item {
+  background: #f1f1f1;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.result-item:hover {
+  background: #e0e0e0;
+}
+
+/*https://www.w3schools.com/howto/howto_css_shake_image.asp*/
+#logo:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 2s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, -10px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, 5px) rotate(-10deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(10deg);
+  }
+  30% {
+    transform: translate(3px, -10px) rotate(-10deg);
+  }
+  40% {
+    transform: translate(1px, 5px) rotate(10deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-10deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(10deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-10deg);
+  }
+  80% {
+    transform: translate(-1px, -10px) rotate(10deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(-10deg);
+  }
+  100% {
+    transform: translate(1px, -10px) rotate(10deg);
+  }
 }

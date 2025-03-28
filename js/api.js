@@ -1,4 +1,6 @@
-export async function cocktailsByName(name) {
+export { cocktailsByName, randomCocktail, cocktailById, cocktailByTequila };
+
+async function cocktailsByName(name) {
   const response = await fetch(
     `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`
   );
@@ -6,10 +8,27 @@ export async function cocktailsByName(name) {
   return data.drinks;
 }
 
-export async function randomCocktail() {
+async function randomCocktail() {
   const response = await fetch(
     `https://www.thecocktaildb.com/api/json/v1/1/random.php`
   );
   const data = await response.json();
   return data.drinks;
+}
+
+async function cocktailById(id) {
+  const response = await fetch(
+    `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
+  );
+  const data = await response.json();
+  return data.drinks;
+}
+//Cocktails by popular spirits gin, vodka, tequila, etc
+//tequila
+async function cocktailByTequila() {
+  const response = await fetch(
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=tequila"
+  );
+  const data = await response.json();
+  return data;
 }
