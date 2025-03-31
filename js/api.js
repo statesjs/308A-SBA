@@ -1,4 +1,11 @@
-export { cocktailsByName, randomCocktail, cocktailById, cocktailByTequila };
+export {
+  cocktailsByName,
+  randomCocktail,
+  cocktailById,
+  cocktailByTequila,
+  cocktailByVodka,
+  cocktailByGin,
+};
 
 async function cocktailsByName(name) {
   const response = await fetch(
@@ -30,7 +37,7 @@ async function cocktailByTequila() {
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=tequila"
   );
   const data = await response.json();
-  return data;
+  return data.drinks;
 }
 
 async function cocktailByGin() {
@@ -38,7 +45,7 @@ async function cocktailByGin() {
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=gin"
   );
   const data = await response.json();
-  return data;
+  return data.drinks;
 }
 
 async function cocktailByVodka() {
@@ -46,5 +53,8 @@ async function cocktailByVodka() {
     "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=vodka"
   );
   const data = await response.json();
-  return data;
+
+  return data.drinks;
 }
+
+cocktailByVodka();

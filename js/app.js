@@ -1,4 +1,12 @@
-import { cocktailsByName, randomCocktail } from "./api.js";
+import {
+  cocktailsByName,
+  randomCocktail,
+  cocktailById,
+  cocktailByGin,
+  cocktailByVodka,
+  cocktailByTequila,
+} from "./api.js";
+
 import { renderCocktails } from "./dom.js";
 
 document.getElementById("search-btn").addEventListener("click", async () => {
@@ -21,3 +29,23 @@ document.getElementById("random-btn").addEventListener("click", async () => {
   const otherResults = document.getElementById("other-results");
   if (otherResults) otherResults.innerHTML = "";
 });
+
+document
+  .getElementById("spirit-select")
+  .addEventListener("change", async (e) => {
+    const spirit = e.target.value;
+
+    if (!spirit) return;
+
+    let drinks;
+
+    if (spirit === "vodka") {
+      drinks = await cocktailByVodka();
+    } else if (spirit === "gin") {
+      drinks = await cocktailByGin();
+    } else if (spirit === "tequila") {
+      drinks = await cocktailByTequila();
+    }
+
+    renderCocktails(drinks);
+  });
