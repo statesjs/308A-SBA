@@ -13,19 +13,3 @@ As a bar go-er:
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 task for Friday:
-
-Set up project folder & files structure
-
-Create GitHub repo + first commit
-
-Build HTML skeleton (search bar, results container)
-
-Create api.js – Write a fetchCocktailsByName(name) function
-
-Create app.js – Hook search bar to button, call fetchCocktailsByName()
-
-Create dom.js – Write a renderCocktails() function to display cards
-
-Test searching for “margarita” and rendering a card
-
-Commit: git commit -m "Basic search and render working"

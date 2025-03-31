@@ -16,10 +16,8 @@ document.getElementById("random-btn").addEventListener("click", async () => {
   const randomDrinkArr = await randomCocktail();
   const mainDrink = randomDrinkArr[0];
 
-  // Render just the random drink
-  renderCocktails([mainDrink], true); // preserveList = true to skip list rendering
+  renderCocktails([mainDrink], true);
 
-  // Manually clear the other results list
   const otherResults = document.getElementById("other-results");
   if (otherResults) otherResults.innerHTML = "";
 });

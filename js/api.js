@@ -32,3 +32,19 @@ async function cocktailByTequila() {
   const data = await response.json();
   return data;
 }
+
+async function cocktailByGin() {
+  const response = await fetch(
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=gin"
+  );
+  const data = await response.json();
+  return data;
+}
+
+async function cocktailByVodka() {
+  const response = await fetch(
+    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=vodka"
+  );
+  const data = await response.json();
+  return data;
+}
