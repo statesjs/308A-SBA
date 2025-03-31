@@ -39,10 +39,13 @@
         </button>
       </div>
     </nav>
-    <main>
-      <div class="search">
-        <h2>Seach By Name</h2>
+    <main class="container mt-5 pt-4">
+      <header>
+        <h1 class="title">🍹 Cocktail Companion</h1>
+      </header>
 
+      <div class="search-section">
+        <h2>Search by Name</h2>
         <div id="searchByName">
           <input
             type="text"
@@ -52,9 +55,10 @@
           <button id="search-btn">Search</button>
           <button id="random-btn">Surprise Me</button>
         </div>
-        <hr />
-        <h2>Search by Spirit</h2>
+      </div>
 
+      <div class="search-section">
+        <h2>Search by Spirit</h2>
         <select id="spirit-select">
           <option value="">-- Select a spirit --</option>
           <option value="vodka">Vodka</option>
@@ -62,12 +66,22 @@
           <option value="tequila">Tequila</option>
         </select>
       </div>
-      <section id="results">
+
+      <div
+        id="loading"
+        style="display: none; text-align: center; margin: 2rem 0"
+      >
+        <p>Loading...</p>
+      </div>
+
+      <section id="results" class="results-flex">
         <div id="main-drink"></div>
         <div id="other-results"></div>
       </section>
     </main>
-
+    <footer>
+      <p>SBA 308A by Jesse States</p>
+    </footer>
     <script type="module" src="js/app.js"></script>
   </body>
 </html>

@@ -84,18 +84,3 @@ export function renderCocktails(cocktails, preserveList = false) {
     otherResultsContainer.appendChild(ul);
   }
 }
-
-/* 
-work to complete:
-
-- make user / mobile friendly
-- populate the select list with options including
- - tequila , vodka, rum, gin, whiskey
-- work on the ui being so "choppy"
-- make a recommended list 
-- make ingredients clickable and bring up related drinks
-- make a drink list showing every drink in the database, alphabetically
-- favorites section with local storage
-
-
-*/
